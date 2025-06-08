@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+public static String reverse(String str) {
+if (str.length() <= 1) {
+return str;
+}
+return reverse(str.substring(1)) + str.charAt(0);
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a String: ");
+String str = sc.nextLine();
+System.out.println("Present String: " + str);
+String reversed = reverse(str);
+System.out.println("Reversed String: " + reversed);
+if (str.equals(reversed))
+{
+System.out.print("YES");
+}
+else
+{
+System.out.print("NO");
+}
+}
+}
