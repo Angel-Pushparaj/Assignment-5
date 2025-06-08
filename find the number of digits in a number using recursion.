@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+public static int countDigits(int num) {
+if (num == 0)
+{
+return 0;
+}
+return 1 + countDigits(num / 10);
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter a Number: ");
+int number = sc.nextInt();
+if (number == 0)
+{
+System.out.println("The number of digits in 0 is 1");
+}
+else
+{
+int count = countDigits(number);
+System.out.println("The number of digits in " + number + " is " + count);
+}
+}
